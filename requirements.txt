@@ -1,0 +1,9 @@
+pymupdf
+pytesseract
+pillow
+opencv-python
+faiss-cpu
+sentence-transformers
+torch
+ollama
+numpy

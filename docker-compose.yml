@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  rag-app:
+    build: .
+    container_name: rag-app
+
+    volumes:
+      - ./documents:/app/documents
+      - ./faiss_index.bin:/app/faiss_index.bin
+      - ./chunks.pkl:/app/chunks.pkl
+
+    stdin_open: true
+    tty: true
+
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
